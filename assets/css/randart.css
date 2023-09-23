@@ -1,0 +1,426 @@
+/* @import url(fontawesome-all.min.css);*/
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+
+* {
+	margin: 0;
+}
+
+.fa-instagram:before {
+	content: "\f16d"
+}
+
+.fa-twitter:before {
+	content: "\f099"
+}
+
+.fa-facebook-f:before {
+	content: "\f39e"
+}
+
+.fa-envelope:before {
+	content: "\f0e0"
+}
+
+h1+p {
+	padding: 0vh 0vw 5vh 0vw;
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Free";
+	font-style: normal;
+	font-weight: 900;
+	/*font-display: block;*/
+	src: url(../webfonts/fa-solid-900.ttf) format("truetype")
+}
+
+@font-face {
+	font-family: "Font Awesome 5 Brands";
+	font-style: normal;
+	font-weight: 400;
+	/*font-display: block;*/
+	src: url(../webfonts/fa-brands-400.ttf) format("truetype")
+}
+
+
+
+
+
+/* Header */
+
+#header .logo {
+	display: flex;
+	border-bottom: 0;
+	color: inherit;
+	font-weight: 900;
+	letter-spacing: 0.35em;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 2vw;
+}
+
+#header .logo>* {
+	display: flex;
+	vertical-align: middle;
+}
+
+#header .logo .symbol {
+	margin-right: 0.65em;
+}
+
+#header .logo .symbol img {
+	display: flex;
+	width: 2em;
+	height: 2em;
+}
+
+#header nav {
+	position: fixed;
+	margin-top: 0vh;
+	z-index: 10000;
+}
+
+#header nav ul {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#header nav ul li {
+	display: flex;
+	padding: 0;
+}
+
+#header nav ul li a {
+	display: flex;
+	position: relative;
+	height: 3em;
+	line-height: 3em;
+	padding: 0 1.5em;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 4px;
+	border: 0;
+	font-size: 0.8em;
+	font-weight: 900;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+}
+
+
+#main {
+
+	min-height: 70vh;
+	padding: 0vh 2vw 2vh 2vw;
+	text-align: center;
+	margin-top: 15vh;
+}
+
+.menu_link {
+	text-decoration: none;
+	color: white;
+	padding-inline: 4vw;
+	background-color: grey;
+	margin: 0 1vw 0 0;
+}
+
+.header-linea {
+	display: flex;
+	margin-top: -6vh;
+	justify-content: center;
+	background-color: white;
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.directorio {
+	display: grid;
+	grid-gap: 10vh;
+	grid-template-columns: auto auto auto;
+}
+
+/* ultimo footer */
+#footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+	padding: 3vh 3vw 1.5vw 3vh;
+
+}
+
+.seguinos {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	column-gap: 2vw;
+}
+
+.seguinos a {
+	color: #000;
+	text-decoration: none;
+}
+
+.seguinos a:hover {
+	color: #666;
+}
+
+section {
+	display: flex;
+	align-items: center;
+}
+
+section ul {
+	list-style: none;
+
+}
+
+section ul li a {
+	color: #000;
+	text-decoration: none;
+}
+
+section ul li a:hover {
+	color: #666;
+}
+
+
+#presentacion {
+	display: grid;
+	place-items: center;
+	justify-content: center;
+	/* Centrar verticalmente */
+	align-items: center;
+	/* Centrar horizontalmente */
+	height: 70vh;
+	/* Esto asegura que el section ocupe toda la altura de la ventana */
+	text-align: center;
+	/* Alinea el texto en el centro */
+}
+
+#presentacion * {
+	padding-top: 2vh;
+}
+
+#presentacion img {
+	margin-top: -3vh;
+}
+
+a:hover {
+	border-bottom-color: transparent;
+	color: #f2849e !important;
+}
+
+
+
+
+/* Type */
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+body,
+input,
+select,
+textarea {
+	color: #585858;
+	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: 300;
+	line-height: 1.75;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900;
+	line-height: 1.5;
+
+	text-transform: uppercase;
+	letter-spacing: 0.35em;
+}
+
+
+/* Iconos */
+
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+}
+
+.icon:before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+}
+
+.icon>.label {
+	display: none;
+}
+
+.icon:before {
+	line-height: inherit;
+}
+
+.icon.solid:before {
+	font-weight: 900;
+}
+
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.icon.style2 {
+	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+	background-color: transparent;
+	border: solid 1px #c9c9c9;
+	border-radius: 4px;
+	width: 2.65em;
+	height: 2.65em;
+	display: inline-block;
+	text-align: center;
+	line-height: 2.65em;
+	color: inherit;
+}
+
+.icon.style2:before {
+	font-size: 1.1em;
+}
+
+.icon.style2:hover {
+	color: #f2849e;
+	border-color: #f2849e;
+}
+
+.icon.style2:active {
+	background-color: rgba(242, 132, 158, 0.1);
+}
+
+
+/* seguinos */
+
+ul.seguinos {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.seguinos li {
+	display: inline-block;
+
+}
+
+.formulario
+{
+		display: flex;
+		flex-direction: column;
+		row-gap: 5vh;
+
+
+}
+/*
+body
+{
+	
+	background-image: url(/images/transparecia1.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+*/
+form
+{
+	display: grid;
+	grid-template-columns: 25% 75%;
+	row-gap: 2vh;
+}
+
+/* Extra small devices (600px and down) */
+@media only screen and (max-width: 600px) {
+
+	#presentacion {
+		height: 0vh;
+	}
+
+	#main {
+		margin-top: 45vh;
+	}
+
+	.header-linea {
+		flex-direction: column;
+		row-gap: 2vh;
+		padding-top: 3vh;
+		padding-bottom: 4vh;
+	}
+
+	#footer {
+		flex-direction: column;
+	}
+
+
+	.seguinos {
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 2vh;
+	}
+
+	.directorio {
+		grid-template-columns: auto;
+	}
+}
+
+/* Small devices (600px and up) */
+@media only screen and (min-width: 600px) {
+	.example {
+		background: green;
+	}
+}
+
+/* Medium devices (768px and up) */
+@media only screen and (min-width: 768px) {
+	.example {
+		background: blue;
+	}
+}
+
+/* Large devices (992px and up) */
+@media only screen and (min-width: 992px) {
+	.example {
+		background: orange;
+	}
+}
+
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+	/* #menu{
+
+		display: flex;	
+		flex-direction: row;
+		align-items: center;
+		justify-content: center; 
+	} */
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="arte, galeria, fotos, pinturas, coleccion">
+    <meta name="description" content="Galeria de arte">
+    <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
+    <!-- Relacionar con archivo de estilos    -->
+    <link rel="stylesheet" href="/assets/css/randart.css" />
+    <title>RANDART</title>
+</head>
+
+
+<body>
+    <header id="header">
+
+        <nav class="header-linea">
+            <a href="../index.html" class="logo">
+                <span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">RANDART</span>
+            </a>
+
+            <a class="menu_link" href="../index.html">Inicio</a>
+            <a class="menu_link" href="galeria.html">Galeria</a>
+            <a class="menu_link" href="directorio.html">Directorio</a>
+            <a class="menu_link" href="formulario.html">Contacto</a>
+
+        </nav>
+
+    </header>
+
+    <main id="main">
+
+        <section class="formulario">
+
+            <h2>Formulario de registro</h2>
+
+            <form action="">
+
+                    <label for="firstname">Nombre: </label>
+                    <input size="30" type="text" name="firstname" placeholder="Ingrese su nombre aqui...">
+
+                <label for="lastname">Apellido:</label>
+                <input size="30" type="text" name="lastname" placeholder="Ingrese su apellido aqui...">
+                <label for="street">Direccion:</label>
+                <input type="text" name="address" placeholder="Ingrese su dirección aqui...">
+                <label for="number">Numero:</label>
+                <input type="number" name="number" placeholder="Ingrese el numero..">
+                <label for="city">Ciudad: </label>
+                <input type="text" name="city" value="ej. C.A.B.A.">
+                <label for="zipcode">Código Postal:</label>
+                <input type="text" name="zipcode" placeholder="Ingrese su codigo postal aqui...">
+                <label for="telefono">Telefono: </label>
+                <input type="tel" name="telefono" placeholder="ingrese su telefono aqui ....">
+                <label for="BirthDate">Fecha Nac.(mm/dd/yyyy): </label> 
+                <input type="date" name="birthdate">
+                <label for="clave">Clave: </label>
+                <input type="password" name="clave">
+                <label for="mail">Mail: </label>
+                <input type="email" name="mail">
+                <label for="url">Link a pagina personal: </label>
+                <input type="url" name="url">
+                <label for="gender">Género </label>
+                <div>
+                    <input type="radio" name="gender" value="hombre" checked>Hombre
+                    <input type="radio" name="gender" value="Mujer">Mujer
+                    <input type="radio" name="gender" value="Otro"> Otro
+                </div>
+
+                <label for="conocimientos"> Intereses sobre el contenido de la pagina:</label>
+                <div>
+                    <input type="checkbox" name="conocimientos" value="Arte en general"> Arte en general
+                    <input type="checkbox" name="conocimientos" value="Pinturas"> Pinturas
+                    <input type="checkbox" name="conocimientos" value="Dioramas"> Dioramas
+                    <input type="checkbox" name="conocimientos" value="Coleccionismo"> Coleccionismo
+                    <input type="checkbox" name="conocimientos" value="Revistas"> Revistas
+                </div>
+               
+                <label for="estudios">Otros intereses</label>
+                <select id="estudios" name="estudios"></select>
+
+                <label for="comentarios">Comentarios:</label> 
+                <textarea name="comentarios" rows="10" cols="30"></textarea>
+                <input type="submit" value="Enviar">
+                <button type="reset">Reset</button>
+            </form>
+            
+            <p>Si usted hace click en el boton "Enviar", la informacion sera enviada a la pagina "show_data.html".</p>
+        </section>
+
+    </main>
+    <footer id="footer">
+
+        <ul class="seguinos">
+            <li>
+                <h3>Seguinos</h3>
+            </li>
+            <li><a href="https://twitter.com/" class="icon brands style2 fa-twitter">
+                    <span class="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/?locale=es_LA" class="icon brands style2 fa-facebook-f">
+                    <span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/" class="icon brands style2 fa-instagram">
+                    <span class="label">Instagram</span></a></li>
+            <li><a href="mailto:nrmattar@gmail.com" class="icon solid style2 fa-envelope">
+                    <span class="label">Email</span></a></li>
+        </ul>
+
+
+        <p class="copyright">&copy; Randart. Todos los derechos reservados</p>
+
+    </footer>
+</body>
+
+</html>
