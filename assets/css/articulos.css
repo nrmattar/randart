@@ -1,52 +1,52 @@
-
 /* ARTICULO HTML */
 
-.articulo{
-display: flex;
-flex-direction: row;
-column-gap: 5vh;
-justify-content: space-between;
+.articulo {
+	display: flex;
+	flex-direction: row;
+	column-gap: 5vh;
+	justify-content: space-between;
 
 }
 
-.articulo img{
+.articulo img {
 	width: 50%;
 	max-width: 50%;
 	display: block;
 }
 
-.informacion{
+.informacion {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	text-align: left;
-	row-gap: 2vh;	
+	row-gap: 2vh;
 	max-width: 50%;
-	
+
 }
 
-.informacion a{
+.informacion a {
 	text-decoration: none;
 	color: #333333;
 
 }
+
 .boton-comprar {
-    background-color: #3498db;
-    color: #ffffff; 
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s; 
+	background-color: #3498db;
+	color: #ffffff;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s;
 	border-radius: 5%;
 }
 
 .boton-comprar:hover {
-    transform: scale(1.1); 
+	transform: scale(1.1);
 }
 
-.precio{
-	color:green;
+.precio {
+	color: green;
 }
 
 /* GALERIA HTML */
@@ -54,8 +54,8 @@ justify-content: space-between;
 	display: grid;
 	grid-gap: 5vw;
 	grid-template-columns: auto auto auto;
-	
-	
+
+
 }
 
 .tiles article {
@@ -151,9 +151,26 @@ body:not(.is-touch) .tiles article:hover>.image:before {
 
 /* Extra small devices (600px and down) */
 @media only screen and (max-width: 600px) {
-	.tiles{
+	.tiles {
 		grid-template-columns: auto;
 		grid-gap: 5vh;
 	}
-}
 
+	.articulo {
+		flex-direction: column;
+		row-gap: 5vh;
+
+
+	}
+
+	.articulo img {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.informacion {
+		max-width: 100%;
+
+	}
+
+}
