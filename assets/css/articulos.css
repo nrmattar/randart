@@ -1,31 +1,79 @@
 
-.tiles {
+/* ARTICULO HTML */
+
+.articulo{
+display: flex;
+flex-direction: row;
+column-gap: 5vh;
+justify-content: space-between;
+
+}
+
+.articulo img{
+	width: 50%;
+	max-width: 50%;
+	display: block;
+}
+
+.informacion{
 	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	margin: -2.5em 0 0 -2.5em;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: left;
+	row-gap: 2vh;	
+	max-width: 50%;
+	
+}
+
+.informacion a{
+	text-decoration: none;
+	color: #333333;
+
+}
+.boton-comprar {
+    background-color: #3498db;
+    color: #ffffff; 
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s; 
+	border-radius: 5%;
+}
+
+.boton-comprar:hover {
+    transform: scale(1.1); 
+}
+
+.precio{
+	color:green;
+}
+
+/* GALERIA HTML */
+.tiles {
+	display: grid;
+	grid-gap: 5vw;
+	grid-template-columns: auto auto auto;
+	
+	
 }
 
 .tiles article {
-
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	position: relative;
-	width: calc(33.33333% - 2.5em);
-	margin: 2.5em 0 0 2.5em;
+	border-radius: 5%;
 }
 
 .tiles article>.image {
 	transition: transform 0.5s ease;
-	position: relative;
 	display: block;
-	width: 100%;
-	border-radius: 4px;
-	overflow: hidden;
+	border-radius: 5%;
 }
 
 .tiles article>.image img {
 	display: block;
 	width: 100%;
+	border-radius: 5%;
 }
 
 .tiles article>.image:before {
@@ -38,6 +86,7 @@
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	border-radius: 5%;
 
 }
 
@@ -60,9 +109,6 @@
 	z-index: 3;
 }
 
-.tiles article>a> :last-child {
-	margin: 0;
-}
 
 .tiles article>a:hover {
 	color: #ffffff !important;
@@ -70,6 +116,7 @@
 
 .tiles article>a h2 {
 	margin: 0;
+	opacity: 0;
 }
 
 .tiles article>a .content {
@@ -82,8 +129,13 @@
 	opacity: 0;
 }
 
-.tiles article>a .content> :last-child {
-	margin-bottom: 0;
+/* Este efecto lo hace sólo cuando la pantalla no es táctil */
+body:not(.is-touch) .tiles article:hover>a h2 {
+	opacity: 100;
+}
+
+body:not(.is-touch) .tiles article:hover>a .content {
+	opacity: 100;
 }
 
 body:not(.is-touch) .tiles article:hover>.image {
@@ -94,5 +146,14 @@ body:not(.is-touch) .tiles article:hover>.image {
 body:not(.is-touch) .tiles article:hover>.image:before {
 	background-color: #333333;
 	opacity: 0.55;
+}
+
+
+/* Extra small devices (600px and down) */
+@media only screen and (max-width: 600px) {
+	.tiles{
+		grid-template-columns: auto;
+		grid-gap: 5vh;
+	}
 }
 
