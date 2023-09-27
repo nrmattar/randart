@@ -116,12 +116,12 @@ h1+p {
 
 #main {
 
-	min-height: 40vh; /* mínimo de altura del 70% del viewport */
-    display: flex; /* Activa el modelo de caja flexible */
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center; /* Centra horizontalmente el texto */
-    margin-top: 10px; /* Añade margen superior para subir el párrafo */
+	min-height: 40vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center; 
+    margin-top: 10px; 
 }
 
 .centered-paragraph {
