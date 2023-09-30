@@ -3,8 +3,8 @@
 form{
     position: relative;
     max-width: auto;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
    color: #f2849e;
    
     
@@ -27,10 +27,14 @@ font-size: larger;
 font-weight: bold;
 } */
 
-/* se centra el titulo  */
+/* se centra en modificar el titulo  */
+
 h2{
+
 margin-left: 300px;
 margin-right: 5px;
+margin-left: 30%;
+margin-right: auto;
 padding-left: 5px;
 padding-right: 5px;
 color: #f2849e;
@@ -42,7 +46,6 @@ margin-right: 5px;
 padding-left: 5px;
 padding-right: 5px;
     text-align:justify;
-    color: #f2849e;
     
     
 }
@@ -63,6 +66,7 @@ div{
     padding-left: 5px;
     padding-right: 5px;
 
+    /* boton enviar */
 }
 input[type="submit" i] {
     position: relative;
@@ -70,6 +74,10 @@ input[type="submit" i] {
     margin-right: auto;
     float: none
 }
+
+
+
+/* modificaciones de las checkbox y radius */
 
 input[type="checkbox" i]{
     appearance: none;
@@ -127,6 +135,7 @@ input[type="radio" i]:checked {
   input[type="radio" i] {
     transition: background-color 0.3s ease-in-out;
 }
+ /* modificaciones del boton enviar */
 
 .boton{
     background-color: gray; 
