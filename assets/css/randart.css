@@ -116,10 +116,18 @@ h1+p {
 
 #main {
 
-	min-height: 70vh;
-	padding: 0vh 2vw 2vh 2vw;
-	text-align: center;
-	margin-top: 15vh;
+	min-height: 40vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.centered-paragraph {
+  display: flex;
+  justify-content: center;
+    margin: 25px;
 }
 
 .menu_link {
@@ -148,6 +156,76 @@ h1+p {
 	grid-gap: 10vh;
 	grid-template-columns: auto auto auto;
 }
+/* Estilos para la sección de galería */
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo gris transparente*/
+  border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 0px auto; /* Centra horizontalmente */
+    position: relative;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    position: relative;
+    margin-top: 5px; /* margen superior para separar del contenedor anterior */
+}
+.flexible-image {
+    max-width: 100%; /* Ancho máximo de todas las imágenes al tamaño de pantalla */
+    height: auto; /*proporción de aspecto de las imágenes */
+  
+}
+
+
+.gallery img {
+    width: 500px; /* Ancho fijo para todas las imágenes */
+    height: 400px; /* Altura fija para todas las imágenes */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    margin-bottom: 10px; /* Espacio entre las imágenes */
+    display: none; /* Oculta todas las imágenes inicialmente */
+}
+
+.gallery img:first-child {
+    display: block; /* Muestra la primera imagen */
+}
+
+.gallery-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical según tus necesidades */
+    left: 0;
+    right: 0;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #faf5f5;
+    border-radius: 50%;
+    margin: 0 5px; /* Espacio entre los indicadores */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.indicator.active {
+    background-color: grey;
+}
+
+
 
 /* ultimo footer */
 #footer {
@@ -358,6 +436,31 @@ form
 	grid-template-columns: 25% 75%;
 	row-gap: 2vh;
 }
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center !important; /* Alinea el texto en el centro verticalmente */
+}
+
+article h2 {
+    font-size: 1em; /* Tamaño de fuente inicial */
+    max-width: 100%; /* Ancho máximo del contenedor */
+    white-space: normal; /* Asegura que el texto no se divida en varias líneas */
+    
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    article h2 {
+        font-size: 12px; /* Tamaño de fuente más pequeño */
+        margin-top: 15px; /* Margen superior mayor */
+        text-align: center !important;
+    }
+}
+
 
 /* Extra small devices (600px and down) */
 @media only screen and (max-width: 600px) {
