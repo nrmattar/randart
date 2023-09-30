@@ -1,32 +1,39 @@
 
 
 form{
+    position: relative;
     max-width: auto;
     width: auto;
     height: auto;
+   color: #f2849e;
+   
+    
 }
 
-label {
+/* se modifica el textos que esta en el body del formulario */
+/* label {
     
     backface-visibility: hidden;
 font-style: italic;
 font-size: larger;
 font-weight: bold;
-}
+} */
 
-div {
+/* div {
     
     backface-visibility: hidden;
 font-style: italic;
 font-size: larger;
 font-weight: bold;
-}
+} */
 
+/* se centra el titulo  */
 h2{
 margin-left: 300px;
 margin-right: 5px;
 padding-left: 5px;
 padding-right: 5px;
+color: #f2849e;
 }
 
 input{
@@ -35,8 +42,11 @@ margin-right: 5px;
 padding-left: 5px;
 padding-right: 5px;
     text-align:justify;
+    color: #f2849e;
+    
     
 }
+
 
 div{
     margin-left: 5px;
@@ -45,6 +55,8 @@ div{
     padding-right: 5px;
 
 }
+
+
 .value {
     margin-left: 5px;
     margin-right: 5px;
@@ -53,11 +65,81 @@ div{
 
 }
 input[type="submit" i] {
-
-    margin-left: auto;
+    position: relative;
+    margin-left: 200%;
     margin-right: auto;
-    float: none;
-    
-    text-align:center;
+    float: none
+}
 
+input[type="checkbox" i]{
+    appearance: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #f2849e;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border: 2px solid #888;
+}
+
+input[type="checkbox" i]:checked {
+    background-color: #f2849e !important;
+    border: #f2849e;
+  }
+
+
+  input[type="checkbox" i]:disabled {
+    background-color: rgb(198, 198, 198);
+    background-image: none;
+  } 
+  input[type="checkbox" i] {
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+input[type="radio" i]{
+    appearance: none;
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border: 2px solid #888;
+    border-radius: 10px;
+}
+
+input[type="radio" i]{ 
+    color: #f2849e; 
+  }
+
+input[type="radio" i]:checked {
+    background-color: #f2849e !important;
+    border: #f2849e;
+  }
+
+
+  input[type="radio" i]:disabled {
+    background-color: rgb(198, 198, 198);
+    background-image: none;
+  } 
+  input[type="radio" i] {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.boton{
+    background-color: gray; 
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+
+}
+.boton:hover {
+	border-bottom-color: transparent;
+	background-color: #f2849e !important;
 }
