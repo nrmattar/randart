@@ -116,13 +116,12 @@ h1+p {
 
 #main {
 
-	min-height: 40vh; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    text-align: center; 
-    margin-top: 10px; 
+	min-height: 70vh;
+	padding: 0vh 2vw 2vh 2vw;
+	text-align: center;
+	margin-top: 15vh;
 }
+
 
 .centered-paragraph {
   display: flex;
