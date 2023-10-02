@@ -22,7 +22,7 @@
 }
 
 h1+p {
-	padding: 0vh 0vw 5vh 0vw;
+	padding: 0vh 0vw 2vh 0vw;
 }
 
 @font-face {
@@ -56,6 +56,7 @@ h1+p {
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 2vw;
+	
 }
 
 #header .logo>* {
@@ -79,39 +80,7 @@ h1+p {
 	z-index: 10000;
 }
 
-#header nav ul {
-	display: -moz-flex;
-	display: -webkit-flex;
-	display: -ms-flex;
-	display: flex;
-	-moz-align-items: center;
-	-webkit-align-items: center;
-	-ms-align-items: center;
-	align-items: center;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
 
-#header nav ul li {
-	display: flex;
-	padding: 0;
-}
-
-#header nav ul li a {
-	display: flex;
-	position: relative;
-	height: 3em;
-	line-height: 3em;
-	padding: 0 1.5em;
-	background-color: rgba(255, 255, 255, 0.5);
-	border-radius: 4px;
-	border: 0;
-	font-size: 0.8em;
-	font-weight: 900;
-	letter-spacing: 0.35em;
-	text-transform: uppercase;
-}
 
 
 #main {
@@ -126,8 +95,9 @@ h1+p {
 .centered-paragraph {
 	display: flex;
 	justify-content: center;
-	margin: 25px;
+	/*margin: 1vh;*/
 }
+
 
 .menu_link {
 	text-decoration: none;
@@ -156,93 +126,6 @@ h1+p {
 	grid-template-columns: auto auto auto;
 }
 
-/* Estilos para la sección de galería */
-
-.image-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.1);
-	/* Fondo gris transparente*/
-	border-radius: 10px;
-	/* Bordes redondeados */
-	padding: 20px;
-	max-width: 600px;
-	/* Ajusta el ancho máximo según tus necesidades */
-	margin: 0px auto;
-	/* Centra horizontalmente */
-	position: relative;
-}
-
-.gallery {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-	border-radius: 10px;
-	/* Bordes redondeados */
-	text-align: center;
-	position: relative;
-	margin-top: 5px;
-	/* margen superior para separar del contenedor anterior */
-}
-
-.flexible-image {
-	max-width: 100%;
-	/* Ancho máximo de todas las imágenes al tamaño de pantalla */
-	height: auto;
-	/*proporción de aspecto de las imágenes */
-
-}
-
-
-.gallery img {
-	width: 500px;
-	/* Ancho fijo para todas las imágenes */
-	height: 400px;
-	/* Altura fija para todas las imágenes */
-	border-radius: 10px;
-	/* Bordes redondeados para las imágenes */
-	margin-bottom: 10px;
-	/* Espacio entre las imágenes */
-	display: none;
-	/* Oculta todas las imágenes inicialmente */
-}
-
-.gallery img:first-child {
-	display: block;
-	/* Muestra la primera imagen */
-}
-
-.gallery-indicators {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	bottom: 10px;
-	/* Ajusta la posición vertical según tus necesidades */
-	left: 0;
-	right: 0;
-}
-
-.indicator {
-	width: 10px;
-	height: 10px;
-	background-color: #faf5f5;
-	border-radius: 50%;
-	margin: 0 5px;
-	/* Espacio entre los indicadores */
-	cursor: pointer;
-	transition: background-color 0.3s ease-in-out;
-}
-
-.indicator.active {
-	background-color: grey;
-}
-
-
 
 /* ultimo footer */
 #footer {
@@ -251,15 +134,24 @@ h1+p {
 	align-items: center;
 	justify-content: space-between;
 	background-color: #f2f2f2;
-	padding: 3vh 3vw 1.5vw 3vh;
+	padding: 3vh 3vw 1.5vw 3vw;
 
 }
 
+#footer h3{
+
+	margin-right: 2vw;
+}
+.copyright {
+	margin-left: auto;
+}
+
 .seguinos {
+	margin-left: 0;
 	list-style: none;
-	display: flex;
+	display: grid;
 	align-items: center;
-	flex-direction: row;
+	grid-template-columns: auto auto auto auto auto;
 	column-gap: 2vw;
 }
 
@@ -291,27 +183,6 @@ section ul li a:hover {
 	color: #666;
 }
 
-
-#presentacion {
-	display: grid;
-	place-items: center;
-	justify-content: center;
-	/* Centrar verticalmente */
-	align-items: center;
-	/* Centrar horizontalmente */
-	height: 70vh;
-	/* Esto asegura que el section ocupe toda la altura de la ventana */
-	text-align: center;
-	/* Alinea el texto en el centro */
-}
-
-#presentacion * {
-	padding-top: 2vh;
-}
-
-#presentacion img {
-	margin-top: -3vh;
-}
 
 a:hover {
 	border-bottom-color: transparent;
@@ -453,48 +324,41 @@ form {
 	row-gap: 2vh;
 }
 
+/*
 article {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* Centra horizontalmente el contenido */
 	text-align: center !important;
-	/* Alinea el texto en el centro verticalmente */
-}
+	}
 
 article h2 {
 	font-size: 1em;
-	/* Tamaño de fuente inicial */
+	
 	max-width: 100%;
-	/* Ancho máximo del contenedor */
+
 	white-space: normal;
-	/* Asegura que el texto no se divida en varias líneas */
+
 
 }
+*/
 
 
-
-
-@media only screen and (max-width: 600px) {
-	article h2 {
-		font-size: 12px;
-		/* Tamaño de fuente más pequeño */
-		margin-top: 15px;
-		/* Margen superior mayor */
-		text-align: center !important;
-	}
-}
 
 
 /* Extra small devices (600px and down) */
 @media only screen and (max-width: 600px) {
+
+	.menu {
+		display: none;
+	}
 
 	#presentacion {
 		height: 0vh;
 	}
 
 	#main {
-		margin-top: 45vh;
+		margin-top: 15vh;
 	}
 
 	.header-linea {
@@ -506,13 +370,7 @@ article h2 {
 
 	#footer {
 		flex-direction: column;
-	}
-
-
-	.seguinos {
-		flex-direction: column;
-		justify-content: center;
-		row-gap: 2vh;
+		grid-gap: 2vh;
 	}
 
 	.directorio {
@@ -550,4 +408,43 @@ article h2 {
 		align-items: center;
 		justify-content: center; 
 	} */
+}
+
+
+
+
+
+
+
+
+#header nav ul li a[href="#menu"]:before,
+#header nav ul li a[href="#menu"]:after {
+
+	transition: opacity 0.2s ease;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 2em 2em;
+}
+
+/* QUITAR NAHUEL */
+
+
+#header nav ul li a[href="#menu"]:after {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23585858%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+	opacity: 1;
+}
+
+#header nav ul li a[href="#menu"]:hover:before {
+	opacity: 1;
+}
+
+#header nav ul li a[href="#menu"]:hover:after {
+	opacity: 1;
 }

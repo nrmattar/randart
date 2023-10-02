@@ -8,7 +8,8 @@
     <meta name="description" content="Galeria de arte">
     <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
     <!-- Relacionar con archivo de estilos -->
-    <link rel="stylesheet" href="/assets/css/randart.css" />
+    <link rel="stylesheet" href="/css/randart.css" />
+    <link rel="stylesheet" href="/css/banner.css" />
     <title>RANDART</title>
 </head>
 
@@ -18,31 +19,34 @@
             <a href="index.html" class="logo">
                 <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">RANDART</span>
             </a>
-            <a class="menu_link" href="/index.html">Inicio</a>
-            <a class="menu_link" href="/templates/galeria.html">Galeria</a>
-            <a class="menu_link" href="/templates/directorio.html">Directorio</a>
-            <a class="menu_link" href="/templates/formulario.html">Contacto</a>
+       
+                <a class="menu_link" href="/index.html">Inicio</a>
+                <a class="menu_link" href="/templates/galeria.html">Galeria</a>
+                <a class="menu_link" href="/templates/directorio.html">Directorio</a>
+                <a class="menu_link" href="/templates/formulario.html">Contacto</a>
+           
         </nav>
-    </header>
-    <main id="main">
+
+
+     <main id="main">
         <h1>Randart - Arte y colección al azar</h1>
         <p class="centered-paragraph">Descubre una galeria diferente</p>
-        <section id="galeria">
-            <a href="/templates/galeria.html">
-                <div class="image-container">
-                    <div class="gallery">
-                    </div>
-                    <div class="gallery-indicators">
-                    </div>
+        <section id="presentacion">
+
+            <div class="image-container">
+                <a href="/templates/galeria.html"></a>
+                <div class="gallery">
                 </div>
-            </a>
+                </a>
+                <div class="gallery-indicators">
+                </div>
+            </div>
+
         </section>
     </main>
     <footer id="footer">
+        <h3>Seguinos</h3>
         <ul class="seguinos">
-            <li>
-                <h3>Seguinos</h3>
-            </li>
             <li><a href="https://twitter.com/" class="icon brands style2 fa-twitter">
                     <span class="label">Twitter</span></a></li>
             <li><a href="https://www.facebook.com/?locale=es_LA" class="icon brands style2 fa-facebook-f">
@@ -54,7 +58,8 @@
         </ul>
         <p class="copyright">&copy; Randart. Todos los derechos reservados</p>
     </footer>
-    <script src="/js/script.js"></script>
+    <script src="/js/banner.js"></script>
+    <script src="/js/menu.js"></script>
 </body>
 
 </html>
