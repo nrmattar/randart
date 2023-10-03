@@ -1,19 +1,17 @@
-/*
-function changeDivValue() {
-    const menu = document.querySelector(".menu");
-    const display = getComputedStyle(menu).display;
+const menu = document.querySelector("#menu");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
-    if (window.innerWidth <= 600) {
-        if (display == "none") {
-            menu.style = "display: flex; flex-direction: column; row-gap: 2vh;"
-            const main = document.querySelector("#main")
-            main.style = "margin-top: 45vh;"
-        }
-        else {
-            menu.style = "display: none; "
-            const main = document.querySelector("#main")
-            main.style = "margin-top: 0vh;"
-        }
-    }
-}
-*/
+abrir.addEventListener("click", () => {
+    menu.classList.add("visible");
+    cerrar.classList.add("visible");
+    abrir.classList.remove("visible");
+    abrir.classList.add("invisible");
+})
+
+cerrar.addEventListener("click", () => {
+    menu.classList.remove("visible");
+    cerrar.classList.remove("visible");
+    cerrar.classList.add("invisible");
+    abrir.classList.add("visible");
+})
