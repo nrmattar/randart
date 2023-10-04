@@ -76,6 +76,12 @@ a {
 
 }
 
+.logo a{
+	display: flex;
+	gap: 1vw;
+
+}
+
 .logo img {
 	display: flex;
 	width: 2em;
