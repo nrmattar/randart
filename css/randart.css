@@ -3,6 +3,7 @@
 
 * {
 	margin: 0;
+
 }
 
 .fa-instagram:before {
@@ -96,13 +97,17 @@ a {
 	color: white;
 	padding-inline: 4vw;
 	background-color: grey;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+	border-radius: 0%;
 	margin: 0 1vw 0 0;
+	flex-basis: 100%;
 }
 
 
 #main {
 
-	min-height: 70vh;
+	min-height: 71.5vh;
 	padding: 0vh 2vw 2vh 2vw;
 	text-align: center;
 	margin-top: 15vh;
@@ -132,7 +137,7 @@ a {
 	align-items: center;
 	justify-content: space-between;
 	background-color: #f2f2f2;
-	padding: 3vh 3vw 1.5vw 3vw;
+	padding: 3vh 3vw 3vh 3vw;
 	font-size: 2.5vh;
 }
 
@@ -294,37 +299,12 @@ ul.seguinos li {
 
 }
 
-.formulario {
-	display: flex;
-	flex-direction: column;
-	row-gap: 5vh;
-
-
-}
-
-/*
-body
-{
-	
-	background-image: url(/images/transparecia1.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-
-}
-*/
-form {
-	display: grid;
-	grid-template-columns: 25% 75%;
-	row-gap: 2vh;
-}
-
 
 
 /* Extra small devices (600px and down) */
 @media only screen and (max-width: 600px) {
 
+	
 	.abrir-menu,
 	.cerrar-menu {
 		right: 0;
@@ -332,9 +312,8 @@ form {
 		font-size: 2.25rem;
 		background-color: transparent;
 		cursor: pointer;
+		color: inherit;
 	}
-
-
 
 	.abrir-menu {
 		display: block;
@@ -343,19 +322,20 @@ form {
 	.abrir-menu.invisible,
 	.cerrar-menu.invisible {
 		display: none;
-		
 	}
 
 	.abrir-menu.visible,
 	.cerrar-menu.visible {
 		display: block;
-		transition: transform 0.3s;
 	}
 
 	#header {
 		flex-direction: column;
 	}
 
+	#header.activo {
+		box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);   
+	}
 
 	.header-linea {
 		display: none;
@@ -363,25 +343,28 @@ form {
 		row-gap: 2vh;
 		padding-top: 3vh;
 		padding-bottom: 4vh;
+		
 	}
 
 	.header-linea.visible {
-
 		display: block;
 	}
 
 	.header-linea ul {
+		padding-inline-start: 0;
 		flex-direction: column;
 		align-items: center;
 	}
 
+	.header-linea ul li{
+	width: 100%;
+    display: flex;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
 	.abrir-menu {
 		display: block;
-	}
-
-
-	#main {
-		margin-top: 15vh;
 	}
 
 	#presentacion {
@@ -393,7 +376,9 @@ form {
 		grid-gap: 2vh;
 	
 	}
-
+	.copyright {
+		margin-left: 0;
+	  }
 	.directorio {
 		grid-template-columns: auto;
 	}

@@ -8,6 +8,7 @@
 	<meta name="description" content="Galeria de arte">
 	<link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
 	<!-- Relacionar con archivo de estilos    -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="/css/randart.css" />
 	<link rel="stylesheet" href="/css/articulos.css" />
 	<title>RANDART</title>
@@ -15,19 +16,32 @@
 
 
 <body>
-	<header id="header">
+    <header id="header">
+        
+        
+		<div class="logo">
+			<a href="index.html"></a>
+			<img src="../images/logo.svg" alt="" />
 
-		<nav class="header-linea">
-			<a href="../index.html" class="logo">
-				<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">RANDART</span>
-			</a>
-			<a class="menu_link" href="../index.html">Inicio</a>
-			<a class="menu_link" href="galeria.html">Galeria</a>
-			<a class="menu_link" href="directorio.html">Directorio</a>
-			<a class="menu_link" href="formulario.html">Contacto</a>
-		</nav>
+			<span class="title">RANDART</span>
+		</a>
+			<button  id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+			<button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+		</div>
+   
+	
+	<nav class="header-linea" id="menu">
+		
+		<ul>
+			<li> <a class="menu_link" href="/index.html">Inicio</a></li>
+			<li><a class="menu_link" href="/templates/galeria.html">Galeria</a></li>
+			<li><a class="menu_link" href="/templates/directorio.html">Directorio</a></li>
+			<li><a class="menu_link" href="/templates/formulario.html">Contacto</a></li>
+		</ul>
 
-	</header>
+	</nav>
+
+</header>
 	<main id="main">
 
 
@@ -175,6 +189,7 @@
 		<p class="copyright">&copy; Randart. Todos los derechos reservados</p>
 
 	</footer>
+	<script src="/js/menu.js"></script>
 </body>
 
 </html>
