@@ -21,7 +21,6 @@
 	
     max-height: 50vh;
     height: 50vh;
-    width: 30vw;
     object-fit: cover;
 	/* Ancho fijo para todas las imágenes */
 	border-radius: 2vh;
@@ -62,11 +61,4 @@
 
 .indicator.active {
 	background-color: grey;
-}
-
-@media only screen and (max-width: 600px) {
-
-    .image-container img{
-        width: 100%;
-    }
 }

@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: row;
 	column-gap: 5vh;
+	align-items: flex-start;
 	justify-content: space-between;
 
 }
@@ -12,6 +13,7 @@
 	width: 50%;
 	max-width: 50%;
 	display: block;
+	object-fit: scale-down
 }
 
 .informacion {
@@ -33,7 +35,7 @@
 .boton-comprar {
 	background-color: #3498db;
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 2vh;
 	padding: 10px 20px;
 	border: none;
 	cursor: pointer;
@@ -175,6 +177,7 @@ body:not(.is-touch) .tiles article:hover>.image:before {
 	.articulo img {
 		width: 100%;
 		max-width: 100%;
+		
 	}
 
 	.informacion {
