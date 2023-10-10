@@ -1,19 +1,21 @@
-
-.formulario{
+.formulario {
     display: flex;
     flex-direction: column;
     row-gap: 5vh;
 }
-form{
+
+form {
     display: grid;
     justify-content: space-around;
     grid-template-columns: auto;
     gap: 1vh;
 }
-label{
+
+label {
     text-align: center;
 }
-form p{
+
+form p {
     overflow: hidden;
 }
 
@@ -30,29 +32,30 @@ input[type="submit" i] {
 
 /* modificaciones de las checkbox y radius */
 
-.divRadio{
+.divRadio {
     display: grid;
-    grid-template-columns: 10vw 10vw 10vw;
-    justify-content:space-evenly;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
 
 
 }
 
-.divRadio div{
+.divRadio div {
     /*text-align: center;*/
     width: 100%;
 }
 
- .divCheckbox{
+.divCheckbox {
     display: grid;
-    grid-template-columns: 10vw 10vw 10vw;
-    justify-content:space-evenly;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
 }
-.divCheckbox div{
+
+.divCheckbox div {
     width: 100%;
 }
 
-input[type="checkbox" i]{
+input[type="checkbox" i] {
     appearance: none;
     cursor: pointer;
     background-color: #fff;
@@ -69,19 +72,20 @@ input[type="checkbox" i]{
 input[type="checkbox" i]:checked {
     background-color: #f12554;
     border: #f12554;
-  }
+}
 
 
-  input[type="checkbox" i]:disabled {
+input[type="checkbox" i]:disabled {
     background-color: rgb(198, 198, 198);
     background-image: none;
-  } 
-  input[type="checkbox" i] {
+}
+
+input[type="checkbox" i] {
     transition: background-color 0.3s ease-in-out;
 }
 
 
-input[type="radio" i]{
+input[type="radio" i] {
     appearance: none;
     cursor: pointer;
     background-color: #fff;
@@ -94,30 +98,32 @@ input[type="radio" i]{
     margin-right: 0.3vw;
 }
 
-input[type="radio" i]{ 
+input[type="radio" i] {
     color: #f12554;
-  }
+}
 
 input[type="radio" i]:checked {
     background-color: #f12554;
     border: #f12554;
-  }
+}
 
 
-  input[type="radio" i]:disabled {
+input[type="radio" i]:disabled {
     background-color: rgb(198, 198, 198);
     background-image: none;
-  } 
-  input[type="radio" i] {
+}
+
+input[type="radio" i] {
     transition: background-color 0.3s ease-in-out;
 }
- /* modificaciones del boton enviar */
 
-.boton{
-    background-color: gray; 
+/* modificaciones del boton enviar */
+
+.boton {
+    background-color: gray;
     border: none;
     color: white;
-  
+
     text-align: center;
     text-decoration: none;
     font-size: 2.5vh;
@@ -126,9 +132,10 @@ input[type="radio" i]:checked {
     margin-bottom: 2vh;
 
 }
+
 .boton:hover {
-	border-bottom-color: transparent;
-	background-color: #f12554;
+    border-bottom-color: transparent;
+    background-color: #f12554;
     cursor: pointer;
 }
 
@@ -137,19 +144,21 @@ input[type="radio" i]:checked {
 
 @media only screen and (max-width: 600px) {
 
-    form{
+    form {
         display: grid;
         grid-template-columns: auto;
+
+        padding-left: 4vw;
+        padding-right: 4vw;
+
     }
 
 }
 
 @media only screen and (max-width: 800px) {
 
-    .divCheckbox{
-        grid-template-columns: 20vw 20vw;
+    .divCheckbox {
+        grid-template-columns: auto auto;
     }
 
 }
-
-
