@@ -409,10 +409,14 @@ ul.seguinos li {
 	}
 	.copyright {
 		margin-left: 0;
+		text-align: right;
 	  }
 
 	.menu_link{
 		width: 100%;
+	}
+	.seguinos{
+		column-gap: inherit;
 	}
 }
 
