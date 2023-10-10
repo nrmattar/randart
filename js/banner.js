@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // Cambia la imagen cada 5 segundos (5000 ms)
-            /*
+            
             setInterval(function () {
                 const nextIndex = (currentImageIndex + 1) % images.length;
                 changeImage(nextIndex);
             }, 5000);
-            */
+            
         })
         .catch(error => {
             console.error("Error al cargar las imágenes:", error);
