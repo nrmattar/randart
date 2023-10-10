@@ -184,9 +184,13 @@ body:not(.is-touch) .tiles article:hover>.image:before {
 
 	.informacion {
 		max-width: 100%;
+		text-align: center;
+		align-items: center;
 
 	}
-
+	.informacion .descripcion{
+		text-align: justify;
+	}
 }
 
 

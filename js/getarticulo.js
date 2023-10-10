@@ -223,7 +223,7 @@ async function obtenerParametros() {
         <div class="informacion">
           <h2>${titulo}</h2>
           <div><p><b>Autor:</b></p><p>${nombreAleatorio} ${apellidoAleatorio}</p></div>
-          <div><p><b>Descripción:</b></p><p>${descripcion}</p></div>
+          <div><p><b>Descripción:</b></p><p class="descripcion">${descripcion}</p></div>
           <div><p><b>Precio:</b></p><p class="precio"><b>U$S ${precioAleatorio}.- (ARS $ ${precioAleatorio * blueValue}.-)</b></p></div>
           <button class="boton-comprar">Comprar</button>
           <div><p><a href="galeria.html">Volver</a></p></div>
