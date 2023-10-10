@@ -22,9 +22,7 @@
 	content: "\f0e0"
 }
 
-h1+p {
-	padding: 0vh 0vw 2vh 0vw;
-}
+
 
 @font-face {
 	font-family: "Font Awesome 5 Free";
@@ -140,11 +138,19 @@ li:hover {
 	margin-top: 15vh;
 }
 
+hr{
+	margin-top: 2vh;
+	margin-bottom: 4vh;
+	border-color: #e66281;
+	margin-right: 30vw;
+	margin-left: 30vw;
+}
 
 .centered-paragraph {
-	display: flex;
+
 	justify-content: center;
-	/*margin: 1vh;*/
+	color: #f12554;
+	/*font-style*/
 }
 
 
@@ -217,7 +223,7 @@ section ul li a:hover {
 
 a:hover {
 	border-bottom-color: transparent;
-	color: #f2849e !important;
+	color: #f12554 !important;
 	
 }
 
@@ -307,8 +313,8 @@ h6 {
 }
 
 .icon.style2:hover {
-	color: #f2849e;
-	border-color: #f2849e;
+	color: #f12554;
+	border-color: #f12554;
 }
 
 .icon.style2:active {
@@ -397,9 +403,7 @@ ul.seguinos li {
 		display: block;
 	}
 
-	#presentacion {
-		height: 0vh;
-	}
+
 
 	#footer {
 		flex-direction: column;
