@@ -194,39 +194,43 @@ async function obtenerParametros() {
         "Zavala"
 
     ];
+
     const nombreAleatorio = nombres[Math.floor(Math.random() * nombres.length)];
     const apellidoAleatorio = apellidos[Math.floor(Math.random() * apellidos.length)];
-
-    const precioAleatorio = Math.floor(Math.random() * (95000 - 10000 + 1)) + 10000;
-
+  
+    const precioAleatorio = Math.floor(Math.random() * (95 - 10 + 1)) + 100;
+    
+    let blueValue = 0;
+  
+    try {
+      const response = await fetch("https://criptoya.com/api/dolar");
+      const data = await response.json();
+      blueValue = parseFloat(data.blue);
+    } catch (error) {
+      console.error('error', error);
+    }
+  
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-
-    // Obtener el valor del parámetro "Prueba"
     const id = urlParams.get("id");
     const titulo = urlParams.get("titulo");
     const descripcion = urlParams.get("descripcion");
-    // Mostrar los valores en el contenido
+  
     const aleatorioDiv = document.getElementById("aleatorio");
-
-    aleatorioDiv.innerHTML =
-    `
-    <article class="articulo">
-    <img src="/images/Imagen (${id}).jpg" alt="" />
-    <div class="informacion">
-        <h2>${titulo}</h2>
-        <div><p><b>Autor:</p></b><p>${nombreAleatorio} ${apellidoAleatorio}</p></div>
-        <div><p><b>Descripción:</b></p><p>${descripcion}</p></div>
-        <div ><p><b>Precio:</p></b><p class="precio"><b>$ ${precioAleatorio}.-</b></p></div>
-        <button class="boton-comprar">Comprar</button>
-        <div ><p><a href="galeria.html">Volver</a></p></div>
-    </div>
-</article>`
-
-
-}
-
-// Llamar a la función para obtener y mostrar los parámetros
-obtenerParametros();
-
+    aleatorioDiv.innerHTML = `
+      <article class="articulo">
+        <img src="/images/Imagen (${id}).jpg" alt="" />
+        <div class="informacion">
+          <h2>${titulo}</h2>
+          <div><p><b>Autor:</b></p><p>${nombreAleatorio} ${apellidoAleatorio}</p></div>
+          <div><p><b>Descripción:</b></p><p>${descripcion}</p></div>
+          <div><p><b>Precio:</b></p><p class="precio"><b>U$S ${precioAleatorio}.- (ARS $ ${precioAleatorio * blueValue}.-)</b></p></div>
+          <button class="boton-comprar">Comprar</button>
+          <div><p><a href="galeria.html">Volver</a></p></div>
+        </div>
+      </article>`;
+  }
+  
+  // Llamar a la función para obtener y mostrar los parámetros
+  obtenerParametros();
 
