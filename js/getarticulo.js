@@ -1,8 +1,78 @@
+async function Preparar() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = urlParams.get("id");
 
+  let blueValue = 0;
 
+  try {
+    const response = await fetch("https://criptoya.com/api/dolar");
+    const data = await response.json();
+    blueValue = parseFloat(data.blue);
+    console.log('Valor Dolar: ', blueValue);
+  } catch (error) {
+    console.error('error', error);
+  }
+
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        url: "http://127.0.0.1:5000/getarticulo/" + id,
+        articulo: "",
+        dolar: 0,
+        error: false,
+        cargando: true
+      }
+    },
+    // Se llama después de que la instancia haya 
+    // terminado de procesar todas las opciones relacionadas con el estado.
+    created() {
+      this.fetchData(this.url)  // Invocando al método
+    },
+    methods: {
+      fetchData(url) {
+        // Acá se consume la Api  /productos
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            this.articulo = data;
+            this.dolar = blueValue;
+            this.cargando = false
+
+            console.log('this.articulo: ', this.articulo);
+            console.log('this.dolar: ', this.dolar);
+          })
+          .catch(err => {
+            console.error(err);
+            this.error = true
+          });
+      }
+      /*,        
+      // el id se necesita para buscar en la DB y eliminarlo
+      eliminar(id) {
+          const url = 'http://localhost:5000/borrar/' + id;
+          var options = {
+              method: 'DELETE',
+          }
+          fetch(url, options)
+              .then(res => res.text()) // or res.json()
+              .then(res => {
+                  alert("Eliminado correctamente")
+                  location.reload();
+              })
+      }
+      */
+
+    },
+  }).mount('#app')
+}
+
+Preparar();
+
+/*
 async function obtenerParametros() {
-
-
 
     const nombres = [
         "Adán",
@@ -233,4 +303,4 @@ async function obtenerParametros() {
   
   // Llamar a la función para obtener y mostrar los parámetros
   obtenerParametros();
-
+*/
