@@ -1,3 +1,45 @@
+const { createApp } = Vue;
+
+createApp({
+   data() {
+      return {
+         // Inicialmente, cargaremos tanto articulos como galerias
+         urls: {
+            articulos: "http://127.0.0.1:5000/articulos",
+            galerias: "http://127.0.0.1:5000/galerias"
+         },
+         datos: {
+            articulos: [],
+            galerias: []
+         },
+         error: false,
+         cargando: true
+      };
+   },
+   // Se llama después de que la instancia haya
+   // terminado de procesar todas las opciones relacionadas con el estado.
+   created() {
+      this.fetchData('articulos');
+      this.fetchData('galerias');
+   },
+   methods: {
+      fetchData(tipo) {
+         fetch(this.urls[tipo])
+            .then(response => response.json())
+            .then(data => {
+               this.datos[tipo] = data;
+               console.log("this.datos[tipo] = ",this.datos[tipo])
+               this.cargando = false;
+            })
+            .catch(err => {
+               console.error(err);
+               this.error = true;
+            });
+      }
+   }
+}).mount('#app');
+
+
 function articulo_insert() {
 
     let titulo_ingresado = document.getElementById("titulo").value
@@ -82,7 +124,7 @@ function articulo_update() {
 
 
 function articulo_delete(id) {
-    let id = document.getElementById("id").value
+    //let id = document.getElementById("id").value
    
     let url = "http://localhost:5000/articulo_delete/"+id
     var options = {
@@ -185,7 +227,7 @@ function galeria_update() {
 
 
 function galeria_delete(id) {
-    let id = document.getElementById("id").value
+    //let id = document.getElementById("id").value
    
     let url = "http://localhost:5000/galeria_delete/"+id
     var options = {

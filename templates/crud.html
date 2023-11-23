@@ -9,7 +9,7 @@
 	<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
 	<!-- Relacionar con archivo de estilos    -->
 	<link rel="stylesheet" href="../css/randart.css" />
-	<link rel="stylesheet" href="../css/articulos.css" />
+	<link rel="stylesheet" href="../css/crud.css" />
 	<script src="https://kit.fontawesome.com/0a26ed8765.js" crossorigin="anonymous"></script>
 	<title>Artículo</title>
 </head>
@@ -48,6 +48,88 @@
 
 			<p class="centered-paragraph">CRUD</p>
 			<hr>	
+
+            <div id="app" >
+
+                <!-- Botón Nuevo (Azul) -->
+                  <!--<a class="nuevo" href="ingresar_persona.html">Nuevo</a>-->
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+
+                    </section>
+                    <section v-else>
+                        
+                        <section class="datos">
+
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th >ID</th>
+                                        <th >titulo</th>
+										<th >autor</th>
+										<th >descripcion</th>
+										<th >precio</th>
+										<th >imagen</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="articulo in datos.articulos">
+                                        <td>{{articulo.id}}</td>
+                                        <td>{{articulo.titulo}}</td>
+										<td>{{articulo.autor}}</td>
+										<td>{{articulo.descripcion}}</td>
+										<td>{{articulo.precio}}</td>
+										<td>{{articulo.imagen}}</td>
+                                        
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(articulo.id)">Eliminar</button>
+                                            
+                                            <!--<a class="boton" :href="'editar_persona.html?id='+ persona.id+'&nombre=' +persona.nombre" >Editar</a>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        
+
+						
+                            <table class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th >ID</th>
+                                        <th >Razon Social</th>
+										<th >URL del Mapa</th>
+										<th >Observaciones</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   
+                                    <tr v-for="galeria in datos.galerias">
+                                        <td>{{galeria.id}}</td>
+                                        <td>{{galeria.razon_social}}</td>
+										<td>{{galeria.mapa_url}}</td>
+										<td>{{galeria.observaciones}}</td>
+                                        
+                                        <td>
+                                            <button type="button"  v-on:click="eliminar(galeria.id)">Eliminar</button>
+                                            
+                                            <!--<a class="boton" :href="'editar_persona.html?id='+ persona.id+'&nombre=' +persona.nombre" >Editar</a>-->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </section>
+                </section>
+
+            </div>
+
 			<!--
 			<div id="app">
 				<section v-if="error">Lo sentimos se produjo un error</section>
@@ -95,7 +177,7 @@
 
 	<script src="/js/menu.js"></script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="/js/getarticulo.js"></script>
+	<script src="/js/crud.js"></script>
 
 </body>
 
