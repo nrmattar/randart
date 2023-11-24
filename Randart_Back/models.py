@@ -15,4 +15,4 @@ class Articulo(db.Model):
     autor = db.Column(db.String(50))
     descripcion = db.Column(db.String(500))
     precio = db.Column(db.Numeric(precision=10, scale=2))
-    imagen = db.Column(db.String(500))
+    imagen = db.Column(db.Text)

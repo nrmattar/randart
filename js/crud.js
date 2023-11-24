@@ -1,6 +1,6 @@
 const { createApp } = Vue;
 
-createApp({
+const app = createApp({
    data() {
       return {
          // Inicialmente, cargaremos tanto articulos como galerias
@@ -35,13 +35,94 @@ createApp({
                console.error(err);
                this.error = true;
             });
+      },
+      articulo_prepare(id,titulo,autor,descripcion,precio,imagen) {
+        // Asignar el valor al input
+        
+        document.getElementById('articulo_id').value = id;
+        document.getElementById('titulo').value = titulo;
+        document.getElementById('autor').value = autor;
+        document.getElementById('descripcion').value = descripcion;
+        document.getElementById('precio').value = precio;
+        document.getElementById('imagen').value = imagen;
+      },
+      galeria_prepare(id,razon_social,mapa_url,observaciones) {
+        // Asignar el valor al input
+        document.getElementById('galeria_id').value = id;
+        document.getElementById('razon_social').value = razon_social;
+        document.getElementById('mapa_url').value = mapa_url;
+        document.getElementById('observaciones').value = observaciones;
+      },
+      articulo_delete(id){
+        articulo_delete(id)
+      },
+      galeria_delete(id){
+        galeria_delete(id)
       }
    }
 }).mount('#app');
 
 
-function articulo_insert() {
 
+
+
+function articulo_save()
+{
+    let articulo_id = parseInt(document.getElementById("articulo_id").value, 10);
+    console.log("articulo_id: ",articulo_id)
+    if (articulo_id==0 || isNaN(articulo_id))  {
+        //Significa que es insert.
+        console.log("va a insertar")
+        articulo_insert()
+    }
+    else
+    {
+        console.log("va a modificar")
+        articulo_update()
+    }
+    
+}
+
+function articulo_clear()
+{
+    document.getElementById("articulo_id").value = ""
+    document.getElementById("titulo").value = ""
+    document.getElementById("autor").value = ""
+    document.getElementById("descripcion").value = ""
+    document.getElementById("precio").value = ""
+    document.getElementById("imagen").value  = ""
+    
+}
+
+function galeria_save()
+{
+    let galeria_id = parseInt(document.getElementById("galeria_id").value, 10);
+    console.log("galeria_id: ",galeria_id)
+    if (galeria_id==0 || isNaN(galeria_id)) {
+        //Significa que es insert.
+        console.log("va a insertar")
+        galeria_insert()
+    }
+    else
+    {
+        console.log("va a modificar")
+        galeria_update()
+    }
+    
+}
+
+function galeria_clear()
+{
+    document.getElementById("galeria_id").value = ""
+    document.getElementById("razon_social").value = ""
+    document.getElementById("mapa_url").value = ""
+    document.getElementById("observaciones").value = ""
+    
+}
+
+
+function articulo_insert() {
+    console.log("Entro a insertar")
     let titulo_ingresado = document.getElementById("titulo").value
     let autor_ingresado = document.getElementById("autor").value
     let descripcion_ingresado = document.getElementById("descripcion").value
@@ -68,7 +149,9 @@ function articulo_insert() {
     fetch(url, options)
         .then(function () {
             console.log("creado")
-            alert("Grabado")
+            alert("Artículo Guardado")
+            articulo_clear()
+            app.fetchData('articulos');
             // Devuelve el href (URL) de la página actual
             //window.location.href = "./articulos.html";  
             
@@ -82,7 +165,8 @@ function articulo_insert() {
 
 
 function articulo_update() {
-    let id = document.getElementById("id").value
+    console.log("Entro a modificar")
+    let id = document.getElementById("articulo_id").value
     let titulo_ingresado = document.getElementById("titulo").value
     let autor_ingresado = document.getElementById("autor").value
     let descripcion_ingresado = document.getElementById("descripcion").value
@@ -109,8 +193,9 @@ function articulo_update() {
     fetch(url, options)
         .then(function () {
             console.log("modificado")
-            alert("Registro modificado")
-
+            alert("Artículo Modificado")
+            articulo_clear()
+            app.fetchData('articulos');
             //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
             //window.location.href = "./articulos.html";  
           
@@ -136,8 +221,8 @@ function articulo_delete(id) {
     fetch(url, options)
         .then(function () {
             console.log("Eliminado")
-            alert("Registro eliminado")
-
+            alert("Articulo Eliminado")
+            app.fetchData('articulos');
             //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
             //window.location.href = "./galerias.html";  
           
@@ -175,7 +260,9 @@ function galeria_insert() {
     fetch(url, options)
         .then(function () {
             console.log("creado")
-            alert("Grabado")
+            alert("Galería Guardada")
+            galeria_clear()
+            app.fetchData('galerias');
             // Devuelve el href (URL) de la página actual
             //window.location.href = "./articulos.html";  
             
@@ -189,7 +276,7 @@ function galeria_insert() {
 
 
 function galeria_update() {
-    let id = document.getElementById("id").value
+    let id = document.getElementById("galeria_id").value
     let razon_social_ingresado = document.getElementById("razon_social").value
     let mapa_url_ingresado = document.getElementById("mapa_url").value
     let observaciones_ingresado = document.getElementById("observaciones").value
@@ -212,8 +299,9 @@ function galeria_update() {
     fetch(url, options)
         .then(function () {
             console.log("modificado")
-            alert("Registro modificado")
-
+            alert("Galería Modificada")
+            galeria_clear()
+            app.fetchData('galerias');
             //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
             //window.location.href = "./galerias.html";  
           
@@ -239,8 +327,8 @@ function galeria_delete(id) {
     fetch(url, options)
         .then(function () {
             console.log("Eliminado")
-            alert("Registro eliminado")
-
+            alert("Galería eliminada")
+            app.fetchData('galerias');
             //Puedes utilizar window.location.href para obtener la URL actual, redirigir a otras páginas
             //window.location.href = "./galerias.html";  
           
