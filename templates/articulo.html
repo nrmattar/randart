@@ -37,6 +37,7 @@
                 <li><a class="menu_link" href="galeria.html"><img src="../images/Logo.png" alt="" />Galeria</a></li>
                 <li><a class="menu_link" href="directorio.html"><img src="../images/Logo.png" alt="" />Directorio</a></li>
                 <li><a class="menu_link" href="formulario.html"><img src="../images/Logo.png" alt="" />Contacto</a></li>
+				<li><a class="menu_link" href="crud.html"><img src="../images/Logo.png" alt="" />CRUD</a></li>
             </ul>
 
         </nav>
@@ -49,6 +50,33 @@
 			<p class="centered-paragraph">Subí tu obra o artículo de colección que quieras vender. Todas tendrán la misma probabilidad de ser
 				vistas.</p>
 			<hr>	
+
+			<div id="app">
+				<section v-if="error">Lo sentimos se produjo un error</section>
+				<section v-else>
+					<section class="directorio" v-if="cargando">
+						<div class="spinner-border"></div>
+						<p>Cargando .....</p>
+	
+					</section>
+					<section v-else>
+						<article class="articulo">
+							<img :src="'../images/' + articulo.imagen" alt="" />
+							<div class="informacion">
+							  <h2>{{articulo.titulo}}</h2>
+							  <div><p><b>Autor:</b></p><p>{{articulo.autor}}</p></div>
+							  <div><p><b>Descripción:</b></p><p class="descripcion">{{articulo.descripcion}}</p></div>
+							  <div><p><b>Precio:</b></p><p class="precio"><b>U$S {{articulo.precio}}.- (ARS $ ${{articulo.precio*dolar}}.-)</b></p></div>
+							  <button class="boton-comprar">Comprar</button>
+							  <div><p><a href="galeria.html">Volver</a></p></div>
+							</div>
+						  </article>
+	
+						</section>
+					</section>
+				</section>
+			</div>
+			<!-- CODIGO ESTATICO ANTERIOR -->
 		<!-- <article class="articulo">
 			<img src="/../images/Imagen (1).jpg" alt="" />
 			<div class="informacion">
@@ -60,10 +88,12 @@
 			</div>
 		</article> -->
 
+		<!-- CODIGO ESTATICO ANTERIOR
 		<div id="aleatorio">
 
 
 		</div>
+		 -->
 
 	</main>
     <footer id="footer">
@@ -81,8 +111,11 @@
         </ul>
         <p class="copyright">&copy; Randart. Todos los derechos reservados</p>
     </footer>
+
+	<script src="../js/menu.js"></script>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="../js/getarticulo.js"></script>
-	<script src="/js/menu.js"></script>
+
 </body>
 
 </html>
