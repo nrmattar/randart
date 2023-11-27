@@ -61,7 +61,7 @@
 					</section>
 					<section v-else>
 						<article class="articulo">
-							<img :src="articulo.imagen" alt="" />
+							<img :src="'../images/' + articulo.imagen" alt="" />
 							<div class="informacion">
 							  <h2>{{articulo.titulo}}</h2>
 							  <div><p><b>Autor:</b></p><p>{{articulo.autor}}</p></div>
@@ -112,9 +112,9 @@
         <p class="copyright">&copy; Randart. Todos los derechos reservados</p>
     </footer>
 
-	<script src="/js/menu.js"></script>
+	<script src="../js/menu.js"></script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="/js/getarticulo.js"></script>
+	<script src="../js/getarticulo.js"></script>
 
 </body>
 
