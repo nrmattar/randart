@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Almacena las imágenes en la variable 'images'
             images = data.map(item => {
                 const image = document.createElement("img");
-                image.src = item.imagen;
+                image.src = 'images/' + item.imagen;
+
                 image.classList.add("flexible-image");
                 galleryContainer.appendChild(image);
 
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Redirige al usuario a la página de la galería al hacer clic en el contenedor de imágenes
             galleryContainer.addEventListener("click", function () {
-                window.location.href = "/templates/galeria.html";
+                window.location.href = "templates/galeria.html";
             });
 
             // Cambia la imagen cada 5 segundos (5000 ms)

@@ -68,7 +68,7 @@
 						<article v-for="articulo in articulos">
 
 							<span class="image">
-								<img :src="articulo.imagen" alt="" class="flexible-image" />
+								<img :src="'../images/' + articulo.imagen" alt="" class="flexible-image" />
 							</span>
 							<a
 								:href="'articulo.html?id=' + articulo.id">
@@ -238,9 +238,9 @@
 		</ul>
 		<p class="copyright">&copy; Randart. Todos los derechos reservados</p>
 	</footer>
-	<script src="/js/menu.js"></script>
+	<script src="../js/menu.js"></script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="/js/articulos.js"></script>
+	<script src="../js/articulos.js"></script>
 </body>
 
 </html>

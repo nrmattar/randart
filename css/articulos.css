@@ -5,7 +5,7 @@
 	flex-direction: row;
 	column-gap: 5vh;
 	align-items: flex-start;
-	justify-content: space-between;
+	justify-content: space-evenly;
 
 }
 
@@ -23,6 +23,7 @@
 	text-align: left;
 	row-gap: 2vh;
 	max-width: 50%;
+	width: 50%;
 	object-fit: cover;
 }
 
