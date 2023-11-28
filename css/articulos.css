@@ -185,6 +185,7 @@ body:not(.is-touch) .tiles article:hover>.image:before {
 
 	.informacion {
 		max-width: 100%;
+		width: 100%;
 		text-align: center;
 		align-items: center;
 
@@ -218,6 +219,7 @@ body:not(.is-touch) .tiles article:hover>.image:before {
 
 	.informacion {
 		max-width: 100%;
+		width: 100%;
 
 
 	}
