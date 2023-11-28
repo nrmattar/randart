@@ -140,7 +140,7 @@ function articulo_insert() {
     }
     console.log(articulo_json);
     
-    let url = "http://localhost:5000/articulo_insert"
+    let url = "https://randart.pythonanywhere.com/articulo_insert"
     var options = {
         body: JSON.stringify(articulo_json),
         method: 'POST',
@@ -181,7 +181,7 @@ function articulo_update() {
         imagen: imagen_ingresado   
         
     }
-    let url = "http://localhost:5000/articulo_update/"+id
+    let url = "https://randart.pythonanywhere.com/articulo_update/"+id
     var options = {
         body: JSON.stringify(articulo_json),
         method: 'PUT',
@@ -211,7 +211,7 @@ function articulo_update() {
 function articulo_delete(id) {
     //let id = document.getElementById("id").value
    
-    let url = "http://localhost:5000/articulo_delete/"+id
+    let url = "https://randart.pythonanywhere.com/articulo_delete/"+id
     var options = {
         method: 'DELETE',
         // el navegador seguirá automáticamente las redirecciones y
@@ -251,7 +251,7 @@ function galeria_insert() {
     }
     console.log(galeria_json);
     
-    let url = "http://localhost:5000/galeria_insert"
+    let url = "https://randart.pythonanywhere.com/galeria_insert"
     var options = {
         body: JSON.stringify(galeria_json),
         method: 'POST',
@@ -287,7 +287,7 @@ function galeria_update() {
         observaciones: observaciones_ingresado   
         
     }
-    let url = "http://localhost:5000/galeria_update/"+id
+    let url = "https://randart.pythonanywhere.com/galeria_update/"+id
     var options = {
         body: JSON.stringify(galeria_json),
         method: 'PUT',
@@ -317,7 +317,7 @@ function galeria_update() {
 function galeria_delete(id) {
     //let id = document.getElementById("id").value
    
-    let url = "http://localhost:5000/galeria_delete/"+id
+    let url = "https://randart.pythonanywhere.com/galeria_delete/"+id
     var options = {
         method: 'DELETE',
         // el navegador seguirá automáticamente las redirecciones y
