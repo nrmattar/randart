@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Obtener imágenes directamente de la API
-    const url = "http://127.0.0.1:5000/articulos";
+    const url = "https://randart.pythonanywhere.com/articulos";
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Almacena las imágenes en la variable 'images'
             images = data.map(item => {
                 const image = document.createElement("img");
-                image.src = 'images/' + item.imagen;
+                image.src = item.imagen;
 
                 image.classList.add("flexible-image");
                 galleryContainer.appendChild(image);
