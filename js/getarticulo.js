@@ -19,7 +19,7 @@ async function Preparar() {
   createApp({
     data() {
       return {
-        url: "http://127.0.0.1:5000/getarticulo/" + id,
+        url: "https://randart.pythonanywhere.com/getarticulo/" + id,
         articulo: "",
         dolar: 0,
         error: false,

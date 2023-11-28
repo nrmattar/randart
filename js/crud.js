@@ -5,8 +5,8 @@ const app = createApp({
       return {
          // Inicialmente, cargaremos tanto articulos como galerias
          urls: {
-            articulos: "http://127.0.0.1:5000/articulos",
-            galerias: "http://127.0.0.1:5000/galerias"
+            articulos: "https://randart.pythonanywhere.com/articulos",
+            galerias: "https://randart.pythonanywhere.com/galerias"
          },
          datos: {
             articulos: [],
